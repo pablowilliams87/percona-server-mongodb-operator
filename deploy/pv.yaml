@@ -4,7 +4,7 @@ metadata:
   name: mongo0-pv
 spec:
   accessModes:
-  - ReadWriteMany
+  - ReadWriteOnce
   capacity:
     storage: 2Gi
   hostPath:
@@ -16,7 +16,7 @@ metadata:
   name: mongo1-pv
 spec:
   accessModes:
-  - ReadWriteMany
+  - ReadWriteOnce
   capacity:
     storage: 2Gi
   hostPath:
@@ -28,7 +28,7 @@ metadata:
   name: mongo3-pv
 spec:
   accessModes:
-  - ReadWriteMany
+  - ReadWriteOnce
   capacity:
     storage: 2Gi
   hostPath:
