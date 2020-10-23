@@ -12,7 +12,7 @@ spec:
 #    - name: private-registry-credentials
 #  runUid: 1001
   allowUnsafeConfigurations: false
-  updateStrategy: SmartUpdate
+  updateStrategy: RollingUpdate
   upgradeOptions:
     versionServiceEndpoint: https://check.percona.com/versions/
     apply: recommended
