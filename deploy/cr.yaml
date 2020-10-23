@@ -171,19 +171,19 @@ spec:
 #          bucket: S3-BACKUP-BUCKET-NAME-HERE
 #          credentialsSecret: my-cluster-name-backup-s3
 #          region: us-west-2
-#      minio:
-#        type: s3
-#        s3:
-#          bucket: MINIO-BACKUP-BUCKET-NAME-HERE
-#          region: us-east-1
-#          credentialsSecret: my-cluster-name-backup-minio
-#          endpointUrl: http://minio.psmdb.svc.cluster.local:9000/minio/
+      minio:
+        type: s3
+        s3:
+          bucket: backups-mongodb
+          region: us-east-1
+          credentialsSecret: my-cluster-name-backup-minio
+          endpointUrl: http://172.31.32.35:9000/minio/
     tasks:
-#      - name: daily-s3-us-west
-#        enabled: true
-#        schedule: "0 0 * * *"
-#        storageName: s3-us-west
-#        compressionType: gzip
+      - name: daily-s3-us-west
+        enabled: true
+        schedule: "0 0 * * *"
+        storageName: s3-us-west
+        compressionType: gzip
 #      - name: weekly-s3-us-west
 #        enabled: false
 #        schedule: "0 0 * * 0"
