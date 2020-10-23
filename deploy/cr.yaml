@@ -176,13 +176,13 @@ spec:
         s3:
           bucket: backups-mongodb
           region: us-east-1
-          credentialsSecret: my-cluster-name-backup-minio
+          credentialsSecret: my-cluster-name-secrets
           endpointUrl: http://172.31.32.35:9000/minio/
     tasks:
-      - name: daily-s3-us-west
+      - name: daily-backups-mongodb
         enabled: true
         schedule: "*/2 * * * *"
-        storageName: s3-us-west
+        storageName: s3
         compressionType: gzip
 #      - name: weekly-s3-us-west
 #        enabled: false
