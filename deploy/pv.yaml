@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mongo0-pv
+spec:
+  accessModes:
+  - ReadWriteMany
+  capacity:
+    storage: 2Gi
+  hostPath:
+    path: /datafiles/database/mongodb
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mongo1-pv
+spec:
+  accessModes:
+  - ReadWriteMany
+  capacity:
+    storage: 2Gi
+  hostPath:
+    path: /datafiles/database/mongodb
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mongo3-pv
+spec:
+  accessModes:
+  - ReadWriteMany
+  capacity:
+    storage: 2Gi
+  hostPath:
+    path: /datafiles/database/mongodb

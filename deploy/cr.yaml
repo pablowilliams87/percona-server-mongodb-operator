@@ -108,7 +108,7 @@ spec:
 #        accessModes: [ "ReadWriteOnce" ]
         resources:
           requests:
-            storage: 3Gi
+            storage: 2Gi
   mongod:
     net:
       port: 27017
