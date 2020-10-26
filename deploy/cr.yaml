@@ -20,10 +20,10 @@ spec:
   secrets:
     users: my-cluster-name-secrets
   pmm:
-    enabled: true
+    enabled: false
     image: percona/percona-server-mongodb-operator:1.5.0-pmm
-#    serverHost: monitoring-service
-    serverHost: monitoring-service.default.svc.cluster.local
+    serverHost: monitoring-service
+#    serverHost: monitoring-service.default.svc.cluster.local
   replsets:
   - name: rs0
     size: 3
