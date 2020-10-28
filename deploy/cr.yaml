@@ -26,7 +26,7 @@ spec:
 #    serverHost: monitoring-service.default.svc.cluster.local
   replsets:
   - name: rs0
-    size: 3
+    size: 2
     affinity:
       antiAffinityTopologyKey: "kubernetes.io/hostname"
 #      advanced:
@@ -60,13 +60,13 @@ spec:
 #      timeoutSeconds: 5
 #      startupDelaySeconds: 7200
     podDisruptionBudget:
-      maxUnavailable: 1
+      maxUnavailable: 2
 #      minAvailable: 0
     expose:
       enabled: false
       exposeType: LoadBalancer
     arbiter:
-      enabled: false
+      enabled: true
       size: 1
       affinity:
        antiAffinityTopologyKey: "kubernetes.io/hostname"
@@ -90,8 +90,8 @@ spec:
 #       iam.amazonaws.com/role: role-arn
 #     labels:
 #       rack: rack-22
-#     nodeSelector:
-#       disktype: ssd
+      nodeSelector:
+        dbcluster: arbiter
 #    schedulerName: "default"
     resources:
       limits:
