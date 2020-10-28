@@ -50,7 +50,7 @@ spec:
 #    labels:
 #      rack: rack-22
     nodeSelector:
-      dbcluster: mongodb
+      dbcluster: dbnode
 #      disktype: ssd
 #    livenessProbe:
 #      failureThreshold: 4
