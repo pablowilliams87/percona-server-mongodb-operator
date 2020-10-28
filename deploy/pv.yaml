@@ -21,15 +21,3 @@ spec:
     storage: 2Gi
   hostPath:
     path: /datafiles/database/mongodb
----
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: mongo2-pv
-spec:
-  accessModes:
-  - ReadWriteOnce
-  capacity:
-    storage: 2Gi
-  hostPath:
-    path: /datafiles/database/mongodb
