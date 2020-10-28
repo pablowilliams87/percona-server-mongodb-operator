@@ -60,7 +60,7 @@ spec:
 #      timeoutSeconds: 5
 #      startupDelaySeconds: 7200
     podDisruptionBudget:
-      maxUnavailable: 2
+      maxUnavailable: 1
 #      minAvailable: 0
     expose:
       enabled: false
